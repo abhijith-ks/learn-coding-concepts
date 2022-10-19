@@ -1,4 +1,6 @@
-package io.abhijith;
+package io.abhijith.commons;
+
+import io.abhijith.commons.Utilities;
 
 public class BitManipulation {
 

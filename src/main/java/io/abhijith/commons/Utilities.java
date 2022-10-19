@@ -1,4 +1,4 @@
-package io.abhijith;
+package io.abhijith.commons;
 
 public class Utilities {
 
