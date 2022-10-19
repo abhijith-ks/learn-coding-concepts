@@ -16,6 +16,17 @@ public class BitManipulation {
             mask = mask << 1;
         }
         Utilities.printEndLine();
+        /*
+        bit mask is useful in generating power of two
+         */
+        Utilities.printHeading("Power of two with BitMask");
+        mask = 1;
+        int n = 16;
+        for(int i = 0; i < 32; i++) {
+            if(mask == n) System.out.println(n + " is power of two");
+            mask = mask << 1;
+        }
+        Utilities.printEndLine();
 
 
         /*
@@ -32,6 +43,23 @@ public class BitManipulation {
         System.out.println(Integer.toBinaryString(x));
         x = x & (x - 1);
         System.out.println(Integer.toBinaryString(x));
+        Utilities.printEndLine();
+
+
+
+        /*
+        x & (-x)
+        Keeps the right most set bit as it is and unset all other bits
+         */
+        Utilities.printHeading("Keep right most set bit and unset everything else");
+        n = 10;
+        System.out.println("n = " + n);
+        System.out.println(Integer.toBinaryString(n));
+        System.out.println(Integer.toBinaryString(n & (-n)));
+        n = 15;
+        System.out.println("n = " + n);
+        System.out.println(Integer.toBinaryString(n));
+        System.out.println(Integer.toBinaryString(n & (-n)));
         Utilities.printEndLine();
     }
 }
