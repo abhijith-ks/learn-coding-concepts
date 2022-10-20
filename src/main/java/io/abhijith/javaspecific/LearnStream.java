@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class LearnStream {
@@ -87,13 +88,24 @@ public class LearnStream {
 
 
         /*
+        All Match checkes for a condition matches for all elements in the stream
+         */
+        Utilities.printHeading("All Match");
+        String palindrome = "racecar";
+        boolean result = IntStream.range(0, palindrome.length() / 2)
+                        .allMatch(item -> palindrome.charAt(item) == palindrome.charAt(palindrome.length() - item - 1));
+        System.out.println(result);
+        Utilities.printEndLine();
+
+
+        /*
         Returns Stream consistent of the elements of this stream, each boxed to an Integer
          */
-//        Utilities.printHeading("Boxed");
-//        int[] arr = {1,2,3,4, Integer.MAX_VALUE};
-//        Integer[] current = Arrays.stream(arr).boxed().toArray(Integer[]::new);
-//        Arrays.stream(current).forEach(System.out::println);
-//        Utilities.printEndLine();
+        Utilities.printHeading("Boxed");
+        int[] arr = {1,2,3,4, Integer.MAX_VALUE};
+        Integer[] current = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+        Arrays.stream(current).forEach(System.out::println);
+        Utilities.printEndLine();
 
 
     }
