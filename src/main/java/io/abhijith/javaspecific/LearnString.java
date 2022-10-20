@@ -5,6 +5,7 @@ import io.abhijith.commons.Utilities;
 import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class LearnString {
 
@@ -36,9 +37,13 @@ public class LearnString {
 
 
         /*
-
+        Palindrome check using stream
          */
-        Utilities.printHeading("");
+        Utilities.printHeading("Palindrom check");
+        String palindrome = "racecar";
+        boolean result = IntStream.range(0, palindrome.length() / 2)
+                .allMatch(item -> palindrome.charAt(item) == palindrome.charAt(palindrome.length() - item - 1));
+        System.out.println(result);
         Utilities.printEndLine();
     }
 
