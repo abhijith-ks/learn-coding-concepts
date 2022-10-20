@@ -7,6 +7,6 @@ public class Utilities {
     }
 
     public static void printHeading(String heading) {
-        System.out.println("---------------------------------------> " + heading + "<---------------------------------------");
+        System.out.println("---------------------------------------> " + heading + " <---------------------------------------");
     }
 }
